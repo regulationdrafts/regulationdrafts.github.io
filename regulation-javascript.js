@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
             clickCounter.textContent = "summer of 98";
         } else if (currentCount === 419) {
             clickCounter.textContent = "blaze it";
-        } else if (currentCount === 16 && repeatCount < 4) {
+        } else if (currentCount === 16 && repeatCount < 5) {
             repeatCount++;
-            clickCounter.innerHTML = `16 <span style="opacity: 0.4;">(${16 + repeatCount})</span>`;
+            clickCounter.innerHTML = `16 <span style="opacity: 0.7;">(${16 + repeatCount})</span>`;
         } else {
             if (currentCount === 16) {
                 repeatCount = 0; // Reset the repeat count after 16 (20)
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!extraNameBox) {
                 extraNameBox = document.createElement('div');
                 extraNameBox.className = 'regulation-name-box';
-                extraNameBox.innerHTML = '<textarea placeholder="">graysie</textarea>';
+                extraNameBox.innerHTML = '<textarea placeholder="">Graysie</textarea>';
                 nameContainer.appendChild(extraNameBox);
             }
         }

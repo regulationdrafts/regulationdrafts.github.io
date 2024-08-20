@@ -62,9 +62,9 @@ background-color: #FF0000;
     margin: 20px auto;
 }
         
-        .regulation-name-box textarea {
+.regulation-name-box textarea {
     font-size: 20px;
-    padding-top: 35px;
+    padding-top: 37px;
     border: 0px;
     border-radius: 5px;
 }
@@ -113,4 +113,14 @@ background-color: #FF0000;
     background-color: #121212;
     font-weight: bold;
     border-radius: 5px;
+}
+
+.regulation-credit {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    font-family: helvetica;
+    font-weight: bold;
+    opacity: 0.5;
+    font-size: 14px;
 }

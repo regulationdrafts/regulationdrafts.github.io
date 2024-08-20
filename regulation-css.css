@@ -116,6 +116,9 @@ h1 {
     font-weight: bold;
     transition: 0.4s;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #toggleGrid {

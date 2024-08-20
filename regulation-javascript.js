@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clickCounter.textContent = "summer of 98";
         } else if (currentCount === 419) {
             clickCounter.textContent = "blaze it";
-        } else if (currentCount === 16 && repeatCount < 5) {
+        } else if (currentCount === 16 && repeatCount < 4) {
             repeatCount++;
             clickCounter.innerHTML = `16 <span style="opacity: 0.7;">(${16 + repeatCount})</span>`;
         } else {

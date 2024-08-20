@@ -100,6 +100,7 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    height: 58px;
 }
 
 .regulation-randomize, #toggleGrid {
@@ -113,7 +114,8 @@ h1 {
     width: 300px;
     border-radius: 5px;
     font-weight: bold;
-        transition: 0.4s;
+    transition: 0.4s;
+    height: 100%;
 }
 
 #toggleGrid {
@@ -128,15 +130,18 @@ h1 {
 
 .regulation-counter {
     font-size: 16px;
-    display: inline-block;
+    display: flex;
     width: 140px;
     text-align: center;
-    padding: 20px 10px;
+    padding: 0px 10px;
     vertical-align: middle;
     background-color: #121212;
     font-weight: bold;
     border-radius: 5px;
     height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .regulation-credit {

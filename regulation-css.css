@@ -48,6 +48,7 @@ background-color: #FF0000;
     font-family: Helvetica;
     font-weight: bold;
     font-size: 15px;
+    border-radius: 5px;
 }
 
 .regulation-title textarea {
@@ -68,20 +69,6 @@ background-color: #FF0000;
     font-size: 20px;
     padding-top: 37px;
     border: 0px;
-    border-radius: 5px;
-}
-
-.regulation-name-box-old {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    background-color: #121212;
-    border: 1px solid #ccc;
-    font-size: 20px;
-    font-weight: bold;
-    border: 0px;
-    border-radius: 5px;
 }
 
 .regulation-button-container {

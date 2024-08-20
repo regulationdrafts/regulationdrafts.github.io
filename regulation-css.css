@@ -142,6 +142,7 @@ h1 {
 .regulation-credit {
     width: 300px;
     margin: auto;
+background-color: #000;
 }
 
 .regulation-credit a {

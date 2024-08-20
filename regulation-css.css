@@ -12,12 +12,6 @@ font-family: Helvetica;
     flex-wrap: nowrap;
 }
 
-.regulation-logo {
-    background-image: url(https://raw.githubusercontent.com/regulationdrafts/regulationdrafts.github.io/main/regulation-logo-white.png);
-    background-size: cover;
-    color: transparent;
-}
-
 .regulation-header img {
     height: 40px;
     margin-top: -5px;

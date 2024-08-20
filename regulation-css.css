@@ -145,12 +145,14 @@ h1 {
 }
 
 .regulation-credit {
-    width: 300px;
+    width: 100%;
     margin: auto;
-background-color: #000;
+    background-color: #000;
+    display: inline-flex;
+    justify-content: center;
 }
 
-.regulation-credit a {
+.regulation-credit a, .regulation-break {
     display: flex;
     justify-content: center;
     padding: 7px;

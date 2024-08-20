@@ -115,12 +115,14 @@ background-color: #FF0000;
     border-radius: 5px;
 }
 
-.regulation-credit {
+.regulation-credit a {
     display: flex;
     justify-content: center;
-    padding: 5px;
+    padding: 7px;
     font-family: helvetica;
     font-weight: bold;
     opacity: 0.5;
     font-size: 14px;
+    color: #FFF;
+    text-decoration: none;
 }

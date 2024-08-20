@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!extraNameBox) {
                 extraNameBox = document.createElement('div');
                 extraNameBox.className = 'regulation-name-box';
-                extraNameBox.innerHTML = '<textarea placeholder="">Graysie</textarea>';
+                extraNameBox.innerHTML = '<textarea placeholder="">graysie</textarea>';
                 nameContainer.appendChild(extraNameBox);
             }
         }

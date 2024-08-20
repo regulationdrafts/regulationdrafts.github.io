@@ -1,0 +1,116 @@
+body {
+background-color: #000;
+color: #FFF;
+font-family: Helvetica;
+}
+
+.regulation-header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.regulation-header img {
+    height: 75px;
+}
+
+h1 {
+    line-height: 60px;
+    font-size: 50px;
+}
+
+#regulationbox {
+background-color: #FF0000;
+}
+
+.regulation-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.regulation-item textarea, .regulation-title textarea, .regulation-name-box textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #121212;
+    color: #FFF;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.regulation-title textarea {
+    line-height: 75px;
+    border: 0px;
+    font-size: 40px;
+}
+
+.regulation-name-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+        
+        .regulation-name-box textarea {
+    font-size: 20px;
+    padding-top: 35px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.regulation-name-box-old {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #121212;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.regulation-button-container {
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.regulation-randomize {
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #121212;
+    border: 0px;
+    color: #FFF;
+    font-family: Helvetica;
+    width: 300px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+        
+.regulation-counter {
+    font-size: 16px;
+    margin-left: 20px;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    padding: 20px;
+    vertical-align: middle;
+    background-color: #121212;
+    font-weight: bold;
+    border-radius: 5px;
+}

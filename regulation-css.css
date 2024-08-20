@@ -13,7 +13,9 @@ font-family: Helvetica;
 }
 
 .regulation-header img {
-    height: 75px;
+    height: 40px;
+    margin-top: -5px;
+    margin-left: 3px;
 }
 
 h1 {
@@ -115,6 +117,11 @@ background-color: #FF0000;
     border-radius: 5px;
 }
 
+.regulation-credit {
+    width: 300px;
+    margin: auto;
+}
+
 .regulation-credit a {
     display: flex;
     justify-content: center;
@@ -125,4 +132,10 @@ background-color: #FF0000;
     font-size: 14px;
     color: #FFF;
     text-decoration: none;
+    transition: 0.5s;
+}
+
+.regulation-credit a:hover {
+    opacity: 1;
+    transition: 0.5s;
 }

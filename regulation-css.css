@@ -87,10 +87,12 @@ h1 {
     align-items: center;
     justify-content: center;
     border: solid 1px #636363;
+    transition: 0.2s;
 }
 
 .regulation-item:hover, .regulation-name-box textarea:hover {
     background-color: #222;
+    transition: 0.2s;
 }
 
 .regulation-title textarea {

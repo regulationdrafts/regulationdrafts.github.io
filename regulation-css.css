@@ -1,8 +1,12 @@
+/******** background ********/
+
 body {
     background-color: #000;
     color: #FFF;
     font-family: Helvetica;
 }
+
+/******** title ********/
 
 .regulation-header {
     display: flex;
@@ -23,6 +27,8 @@ h1 {
     font-size: 50px;
 }
 
+/******** name boxes ********/
+
 .regulation-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -31,6 +37,19 @@ h1 {
     max-width: 800px;
     margin: 0 auto;
     transition: grid-template-columns 0.3s, grid-template-rows 0.3s;
+}
+
+.regulation-name-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    transition: grid-template-columns 0.3s;
+}
+
+.grid-6x1 {
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .regulation-title textarea,
@@ -48,6 +67,8 @@ h1 {
     font-size: 15px;
     border-radius: 5px;
 }
+
+/******** draft grid ********/
 
 .regulation-item {
     width: 100%;
@@ -74,16 +95,7 @@ h1 {
     font-size: 40px;
 }
 
-.regulation-name-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    max-width: 800px;
-    margin: 20px auto;
-    transition: grid-template-columns 0.3s;
-}
-
-.grid-6x1 {
+.grid-6x4 {
     grid-template-columns: repeat(6, 1fr);
 }
 
@@ -92,6 +104,8 @@ h1 {
     padding-top: 37px;
     border: 0px;
 }
+
+/******** randomise button ********/
 
 .regulation-button-container {
     text-align: center;
@@ -131,6 +145,8 @@ h1 {
     background-color: #222;
 }
 
+/******** randomise counter ********/
+
 .regulation-counter {
     font-size: 16px;
     display: flex;
@@ -147,12 +163,15 @@ h1 {
     gap: 5px;
 }
 
+/******** credit ********/
+
 .regulation-credit {
     width: 100%;
     margin: auto;
     background-color: #000;
     display: inline-flex;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .regulation-credit a, .regulation-break {
@@ -171,8 +190,4 @@ h1 {
 .regulation-credit a:hover {
     opacity: 1;
     transition: 0.5s;
-}
-
-.grid-6x4 {
-    grid-template-columns: repeat(6, 1fr);
 }

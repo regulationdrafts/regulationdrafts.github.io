@@ -90,6 +90,10 @@ h1 {
     border: solid 1px #636363;
 }
 
+.regulation-item:focus {
+    background-color: #222;
+}
+
 .grid-6x4 .regulation-item {
     max-width: 125px;
 }

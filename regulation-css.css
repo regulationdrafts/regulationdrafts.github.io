@@ -153,6 +153,13 @@ h1 {
     opacity: 0.7;
 }
 
+button#toggleGrid:hover:before {
+    content: 'summon the british jackal';
+}
+button#toggleGrid:hover span {
+    display: none;
+}
+
 .regulation-randomize:hover, #toggleGrid:hover {
     opacity: 1;
     transition: 0.4s;

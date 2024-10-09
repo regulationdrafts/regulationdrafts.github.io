@@ -197,8 +197,7 @@ button#toggleGrid:hover span {
 }
 
 button#addButton, button#subtractButton {
-    /* padding: 15px; */
-    font-size: 26px;
+    font-size: 20px;
     cursor: pointer;
     background-color: #121212;
     border: 0px;

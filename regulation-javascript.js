@@ -4,42 +4,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameContainer = document.getElementById('nameContainer');
     const randomizeButton = document.querySelector('.regulation-randomize');
     const clickCounter = document.getElementById('clickCounter');
+    const addButton = document.getElementById('addButton');
+    const subtractButton = document.getElementById('subtractButton');
 
-    let isSixByFour = false; // Track current grid state
-    let extraItems = []; // Track additional items added
-    let extraNameBox = null; // Track additional name box
-    let repeatCount = 0; // Track how many times 16 has been repeated
+    let isSixByFour = false;
+    let extraItems = [];
+    let extraNameBox = null;
+    let repeatCount = 0;
 
-    // Function to handle the paste event for .regulation-item
     function handlePaste(event) {
-        // Prevent the default paste behavior
         event.preventDefault();
-
-        // Get the pasted data as plain text
         const pastedData = (event.clipboardData || window.clipboardData).getData('text');
-
-        // If the pasted data is a valid URL, set it as the background image
         if (pastedData.startsWith('http://') || pastedData.startsWith('https://')) {
             this.style.backgroundImage = `url(${pastedData})`;
-            this.style.backgroundSize = 'cover'; // optional: adjusts how the image fits
-            this.style.backgroundPosition = 'center'; // optional: positions the image in the center
-            this.style.backgroundRepeat = 'no-repeat'; // optional: ensures the image does not repeat
-            this.textContent = ''; // clear the content
+            this.style.backgroundSize = 'cover';
+            this.style.backgroundPosition = 'center';
+            this.style.backgroundRepeat = 'no-repeat';
+            this.textContent = '';
         } else {
-            // If not a valid URL, insert the pasted text
             document.execCommand('insertText', false, pastedData);
         }
     }
 
-    // Function to apply paste event listener to all .regulation-item elements
     function applyPasteListener() {
         document.querySelectorAll('.regulation-item').forEach(item => {
-            item.removeEventListener('paste', handlePaste); // Remove existing listeners to avoid duplication
+            item.removeEventListener('paste', handlePaste);
             item.addEventListener('paste', handlePaste);
         });
     }
 
-    // Initial application of paste listener
     applyPasteListener();
 
     function randomizeNames() {
@@ -53,9 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             box.querySelector('textarea').value = names[index];
         });
 
-        // Update counter logic
         let currentCount;
-
         if (clickCounter.textContent === "nice") {
             currentCount = 69;
         } else if (clickCounter.textContent === "summer of 98") {
@@ -79,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clickCounter.innerHTML = `16 <span style="opacity: 0.7;">(${16 + repeatCount})</span>`;
         } else {
             if (currentCount === 16) {
-                repeatCount = 0; // Reset the repeat count after 16 (20)
+                repeatCount = 0;
                 clickCounter.textContent = "21";
             } else {
                 clickCounter.textContent = currentCount + 1;
@@ -114,8 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     container.appendChild(newItem);
                     extraItems.push(newItem);
                 }
-
-                // Re-apply the paste event listener to the newly added items
                 applyPasteListener();
             }
             if (!extraNameBox) {
@@ -127,13 +116,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         isSixByFour = !isSixByFour;
 
-        // Set max-width of .regulation-item based on the grid state
         const maxWidth = isSixByFour ? '125px' : '150px';
         document.querySelectorAll('.regulation-item').forEach(item => {
             item.style.maxWidth = maxWidth;
         });
     }
 
+    function addRow() {
+        const gridContainer = document.querySelector('.regulation-container');
+        const itemsToAdd = isSixByFour ? 6 : 5;
+        for (let i = 0; i < itemsToAdd; i++) {
+            const newItem = document.createElement('div');
+            newItem.className = 'regulation-item';
+            newItem.contentEditable = 'true';
+            gridContainer.appendChild(newItem);
+        }
+
+        const currentRows = getComputedStyle(gridContainer).gridTemplateRows.split(' ').length;
+        gridContainer.style.gridTemplateRows = `repeat(${currentRows + 1}, auto)`;
+    }
+
+    function subtractRow() {
+        const gridContainer = document.querySelector('.regulation-container');
+        const itemsToRemove = isSixByFour ? 6 : 5;
+        const currentItems = gridContainer.querySelectorAll('.regulation-item');
+        
+        if (currentItems.length >= itemsToRemove) {
+            for (let i = 0; i < itemsToRemove; i++) {
+                currentItems[currentItems.length - 1 - i].remove();
+            }
+
+            const currentRows = getComputedStyle(gridContainer).gridTemplateRows.split(' ').length;
+            if (currentRows > 1) {
+                gridContainer.style.gridTemplateRows = `repeat(${currentRows - 1}, auto)`;
+            }
+        }
+    }
+
     toggleButton.addEventListener('click', toggleGrid);
     randomizeButton.addEventListener('click', randomizeNames);
+    addButton.addEventListener('click', addRow);
+    subtractButton.addEventListener('click', subtractRow);
 });

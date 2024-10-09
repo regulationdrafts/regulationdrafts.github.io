@@ -123,12 +123,13 @@ h1 {
 
 .regulation-button-container {
     text-align: center;
-    margin: 20px;
+    margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     height: 58px;
+    max-width: 970px;
 }
 
 .regulation-randomize, #toggleGrid {
@@ -139,7 +140,7 @@ h1 {
     border: 0px;
     color: #FFF;
     font-family: Helvetica;
-    width: 300px;
+    width: 20%;
     border-radius: 5px;
     font-weight: bold;
     transition: 0.4s;
@@ -182,6 +183,35 @@ button#toggleGrid:hover span {
     align-items: center;
     justify-content: center;
     gap: 5px;
+}
+
+/******** add & subtract buttons ********/
+
+.add-subtract {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+}
+
+button#addButton, button#subtractButton {
+    /* padding: 15px; */
+    font-size: 26px;
+    cursor: pointer;
+    background-color: #121212;
+    border: 0px;
+    color: #FFF;
+    font-family: Helvetica;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.4s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /******** credit ********/

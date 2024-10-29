@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function applyPasteListener() {
         document.querySelectorAll('.regulation-item').forEach(item => {
-            item.removeEventListener('paste', handlePaste);
-            item.addEventListener('paste', handlePaste);
+            item.removeEventListener('paste', handlePaste); // Remove existing listener
+            item.addEventListener('paste', handlePaste); // Add new listener
         });
     }
 
-    applyPasteListener();
+    applyPasteListener(); // Initial application for existing items
 
     function randomizeNames() {
         const nameBoxes = Array.from(nameContainer.querySelectorAll('.regulation-name-box'));
@@ -84,6 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
             container.classList.add('grid-5x4');
             nameContainer.classList.remove('grid-6x1');
             nameContainer.classList.add('grid-5x1');
+
+            // Remove extra items if the grid is reduced
             if (extraItems.length > 0) {
                 extraItems.forEach(item => item.remove());
                 extraItems = [];
@@ -97,6 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
             container.classList.add('grid-6x4');
             nameContainer.classList.remove('grid-5x1');
             nameContainer.classList.add('grid-6x1');
+
+            // Add new grid items
             if (container.children.length < 24) {
                 for (let i = 0; i < 4; i++) {
                     const newItem = document.createElement('div');
@@ -105,8 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     container.appendChild(newItem);
                     extraItems.push(newItem);
                 }
-                applyPasteListener();
+                // Call applyPasteListener after adding new items
+                applyPasteListener(); // Ensure the new items can also paste images
             }
+
+            // Add extra name box
             if (!extraNameBox) {
                 extraNameBox = document.createElement('div');
                 extraNameBox.className = 'regulation-name-box';
@@ -134,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const currentRows = getComputedStyle(gridContainer).gridTemplateRows.split(' ').length;
         gridContainer.style.gridTemplateRows = `repeat(${currentRows + 1}, auto)`;
+        applyPasteListener(); // Ensure new rows can also paste images
     }
 
     function subtractRow() {

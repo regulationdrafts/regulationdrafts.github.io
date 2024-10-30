@@ -161,7 +161,7 @@ button#toggleGrid:hover span {
     display: none;
 }
 
-.regulation-randomize:hover, #toggleGrid:hover {
+.regulation-randomize:hover, #toggleGrid:hover, button#addButton:hover, button#subtractButton:hover {
     opacity: 1;
     transition: 0.4s;
     background-color: #222;

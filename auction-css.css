@@ -139,13 +139,14 @@ input#itemFilter:hover, input#numItemBuyFields:hover, button#addBox:hover, butto
 background-color: #222;
 transition: 0.3s;
 }
-        .regulation-header {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-            flex-wrap: nowrap;
-        }
+.regulation-header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+}
 h1 {
     line-height: 60px;
     font-size: 50px;

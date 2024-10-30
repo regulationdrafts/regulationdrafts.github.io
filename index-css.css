@@ -53,4 +53,5 @@ regulation-credit {
     align-items: center;
     justify-content: center;
     font-size: 15px;
+    opacity: 0.5;
 }

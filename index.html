@@ -1,15 +1,16 @@
+
 <!-- 
-  _____
- /     \
-|       |
+  _____
+ /     \
+|       |
 |_______|
 |   |   |
-| E |   |
-| A |   |
+| E |   |
+| A |   |
 | T | T |
-|   | H |
-|   | E |
-| P |   |
+|   | H |
+|   | E |
+| P |   |
 | E |   |
 | N | A |
 | C | N |
@@ -26,76 +27,23 @@
 
 -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>regulation draft generator</title>
-    <link rel="stylesheet" href="regulation-css.css">
-    <script src="regulation-javascript.js" defer></script>
-    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/regulationdrafts/regulationdrafts.github.io/main/regulation-favicon.ico" />
-    <tag autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-</head>
-<body>
-    <div class="regulation-header">
-        <h1>regulation draft generator</h1>
+<html><head>
+
+    <title>regulation drafts & auctions</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/regulationdrafts/regulationdrafts.github.io/main/regulation-favicon.ico" />
+    <link rel="stylesheet" href="index-css.css">
+
+</head><body>
+
+<div class="regulation-header">
+        <h1>regulation drafts &amp; auctions</h1>
         <img src="https://github.com/regulationdrafts/regulationdrafts.github.io/blob/main/regulation-logo-white.png?raw=true" alt="Regulation Logo">
     </div>
 
-    <div class="regulation-title">
-        <textarea placeholder="draft name"></textarea>
-    </div>
-    
-<div class="regulation-button-container">
-    <button class="regulation-randomize" onclick="randomizeNames()">randomize names</button>
-    <div class="regulation-counter" id="clickCounter">0</div>
-
-<div class="add-subtract"><button id="addButton" class="add-sub-button">+</button>
-<button id="subtractButton" class="add-sub-button">-</button></div>
-
-    <button id="toggleGrid"><span>+ graysie</span></button>
-
+<div class="regulation-welcome">
+<regulation-link><a href="https://regulatreon.com">regulation patreon</a></regulation-link>
+<regulation-link><a href="https://regulationdrafts.github.io/drafts">regulation drafts</a></regulation-link>
+<regulation-link><a href="https://regulationdrafts.github.io/auction">regulation auctions</a></regulation-link>
 </div>
 
-
-    <div class="regulation-name-container" id="nameContainer">
-        <div class="regulation-name-box"><textarea placeholder="">andrew</textarea></div>
-        <div class="regulation-name-box"><textarea placeholder="">nick</textarea></div>
-        <div class="regulation-name-box"><textarea placeholder="">eric</textarea></div>
-        <div class="regulation-name-box"><textarea placeholder="">geoff</textarea></div>
-        <div class="regulation-name-box"><textarea placeholder="">gavin</textarea></div>
-    </div>
-
-    <div class="regulation-container">
-        <!-- Initial 20 items -->
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-        <div class="regulation-item" contenteditable="true"></div>
-    </div>
-
-    <div class="regulation-credit">
-        <a href="https://www.reddit.com/user/seanbear/" target="_blank">seanbear</a>
-        <div class="regulation-break"> // </div>
-        <a href="https://www.patreon.com/TheRegulationPod" target="_blank">regulation podcast</a>
-    </div>
-    
-</body>
-</html>
+</body></html>

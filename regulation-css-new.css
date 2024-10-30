@@ -1,0 +1,271 @@
+/******** background ********/
+
+body {
+    background-color: #000;
+    color: #FFF;
+    font-family: Helvetica;
+}
+
+/******** title ********/
+
+.regulation-header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.regulation-header img {
+    height: 40px;
+    margin-top: -5px;
+    margin-left: 5px;
+}
+
+title-text {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    line-height: 60px;
+    font-size: 50px;
+    cursor: default;
+}
+
+regulation-patreon {
+    margin-right: 50px;
+    transition: 0.3s;
+}
+
+home-button {
+    margin-left: 50px;
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+home-button a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+home-button:hover, regulation-patreon:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+/******** name boxes ********/
+
+.regulation-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: grid-template-columns 0.3s, grid-template-rows 0.3s;
+}
+
+.regulation-name-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    transition: grid-template-columns 0.3s;
+}
+
+.grid-6x1 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.regulation-title textarea,
+.regulation-name-box textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #121212;
+    color: #FFF;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+/******** draft grid ********/
+
+.regulation-item {
+    max-width: 150px;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #121212;
+    color: #FFF;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #636363;
+}
+
+.regulation-item:focus {
+    background-color: #222;
+}
+
+.grid-6x4 .regulation-item {
+    max-width: 125px;
+}
+
+.regulation-item:hover, .regulation-name-box textarea:hover {
+    background-color: #222;
+    transition: 0.2s;
+}
+
+.regulation-title textarea {
+    line-height: 80px;
+    border: 0px;
+    font-size: 40px;
+}
+
+.grid-6x4 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.regulation-name-box textarea {
+    font-size: 20px;
+    padding-top: 37px;
+    border: 0px;
+}
+
+/******** randomise button ********/
+
+.regulation-button-container {
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 58px;
+    max-width: 970px;
+}
+
+.regulation-randomize, #toggleGrid {
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #121212;
+    border: 0px;
+    color: #FFF;
+    font-family: Helvetica;
+    width: 20%;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.4s;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggleGrid {
+    opacity: 0.7;
+}
+
+button#toggleGrid:hover:before {
+    content: 'summon the british jackal';
+}
+button#toggleGrid:hover span {
+    display: none;
+}
+
+.regulation-randomize:hover, #toggleGrid:hover, button#addButton:hover, button#subtractButton:hover {
+    opacity: 1;
+    transition: 0.4s;
+    background-color: #222;
+}
+
+/******** randomise counter ********/
+
+.regulation-counter {
+    font-size: 16px;
+    display: flex;
+    width: 140px;
+    text-align: center;
+    padding: 0px 10px;
+    vertical-align: middle;
+    background-color: #121212;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: default;
+}
+
+/******** add & subtract buttons ********/
+
+.add-subtract {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+}
+
+button#addButton, button#subtractButton {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #121212;
+    border: 0px;
+    color: #FFF;
+    font-family: Helvetica;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.4s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/******** credit ********/
+
+.regulation-credit {
+    width: 100%;
+    margin: auto;
+    background-color: #000;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.regulation-credit a, .regulation-break {
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+    font-family: Helvetica;
+    font-weight: bold;
+    opacity: 0.5;
+    font-size: 14px;
+    color: #FFF;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.regulation-credit a:hover {
+    opacity: 1;
+    transition: 0.5s;
+}

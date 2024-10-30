@@ -86,6 +86,7 @@ span.money {
     justify-content: center;
     gap: 10px;
     font-size: 17px;
+    cursor: default;
 }
 member-grid {
     display: grid;
@@ -148,6 +149,7 @@ transition: 0.3s;
 h1 {
     line-height: 60px;
     font-size: 50px;
+    cursor: default;
 }
         .regulation-header img {
             height: 40px;

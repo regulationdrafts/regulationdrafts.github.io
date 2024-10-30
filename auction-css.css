@@ -69,11 +69,10 @@ member-money {
     display: flex;
     font: 700 20px Helvetica;
     justify-content: center;
-    height: 70px;
     align-items: center;
     gap: 10px;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 span.money {
     display: flex;
@@ -250,7 +249,7 @@ height: 20px;
 }
 name {
     width: 130px;
-    height: 75px;
+    height: 25px;
     background-color: #121212;
     border-radius: 5px;
     padding: 20px 10px;

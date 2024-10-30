@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: nowrap;
 }
 
@@ -22,10 +22,36 @@ body {
     margin-left: 5px;
 }
 
+title-text {
+    display: flex;
+    align-items: center;
+}
+
 h1 {
     line-height: 60px;
     font-size: 50px;
     cursor: default;
+}
+
+regulation-patreon {
+    margin-right: 50px;
+    transition: 0.3s;
+}
+
+home-button {
+    margin-left: 50px;
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+home-button a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+home-button:hover, regulation-patreon:hover {
+    opacity: 0.6;
+    transition: 0.3s;
 }
 
 /******** name boxes ********/

@@ -281,3 +281,9 @@ name {
     opacity: 1;
     transition: 0.5s;
 }
+
+.regulation-header img {
+    height: 40px;
+    margin-top: -5px;
+    margin-left: 5px;
+}

@@ -7,10 +7,11 @@
         }
         .auction-points { display: flex; flex-direction: row; }
 auction-items {
-    display: flex;
+    display: flex
+;
     flex-direction: column;
     font-weight: 700;
-    height: 377px;
+    height: 472px;
     overflow-y: auto;
     padding: 0px 10px 0px 0px;
     width: 400px;

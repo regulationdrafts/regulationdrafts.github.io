@@ -117,7 +117,7 @@ member-grid {
         }
 filter {
     width: 387px;
-    padding: 10px;
+    padding: 10px 10px 5px 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -128,13 +128,13 @@ input#itemFilter {
     font: 700 16px Helvetica;
     text-transform: lowercase;
     width: 376px;
-    height: 45px;
+    height: 60px;
     padding-left: 10px;
     color: #FFF;
     margin-left: 10px;
     transition: 0.3s;
 }
-input#itemFilter:hover, input#numItemBuyFields:hover, button#addBox:hover, button#removeBox:hover, button#createItemBuyFields:hover {
+input#itemFilter:hover, input#numItemBuyFields:hover, button#addBox:hover, button#removeBox:hover, button#createItemBuyFields:hover, button#randomizeNames:hover {
 background-color: #222;
 transition: 0.3s;
 }
@@ -246,6 +246,10 @@ input#numItemBuyFields {
     height: 30px;
     transition: 0.3s;
 }
+button#randomizeNames {
+    width: 200px;
+    margin-bottom: 10px;
+}
 button#createItemBuyFields {
     height: 50px;
     border: 0px;
@@ -272,6 +276,13 @@ input#numItemBuyFields {
 .butthole {
 width: 20px;
 height: 20px;
+}
+img.butthole {
+    transition: 0.2s;
+}
+img.butthole:hover {
+    opacity: 0.7;
+    transition: 0.2s;
 }
 name {
     width: 130px;
@@ -331,4 +342,36 @@ name {
     line-height: 80px;
     border: 0px;
     font-size: 40px;
+}
+
+randomisation {
+    height: 50px;
+    display: flex;
+    margin-bottom: 10px;
+	gap: 10px;
+}
+#randomizeNames {
+    height: 50px;
+    border: 0px;
+    padding: 10px;
+    background-color: #121212;
+    font: 700 16px Helvetica;
+    color: #FFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 50px;
+}
+#regulation-counter {
+    margin-bottom: 10px;
+    height: 50px;
+    background-color: #121212;
+    font: 700 16px Helvetica;
+    display: inline-flex;
+    min-width: 200px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    gap: 4px;
+    cursor: default;
 }

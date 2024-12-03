@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="auction-css-new.css">
+    <script src="auction-js.js" defer></script>
+<link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/regulationdrafts/regulationdrafts.github.io/main/regulation-favicon.ico">
+<tag autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regulation auction</title>
+</head>
+<body>
+
+<div class="regulation-header">
+
+<home-button><a href="https://regulationdrafts.github.io/" target="_blank">◀</a></home-button>
+
+     <title-text><h1>regulation auction house</h1>
+        <img src="https://github.com/regulationdrafts/regulationdrafts.github.io/blob/main/regulation-logo-white.png?raw=true" alt="Regulation Logo"></title-text>   
+
+<regulation-patreon><a href="https://regulatreon.com" target="_blank"><img src="https://github.com/regulationdrafts/regulationdrafts.github.io/blob/main/patreon.png?raw=true"></a></regulation-patreon>
+    </div>
+
+<div class="regulation-title">
+        <textarea placeholder="auction name"></textarea>
+    </div>
+
+<div class="regulation-auction">
+    <div class="auction-points">
+<auction-filter>
+
+<add-subtract>
+    
+<item-number>
+<input type="number" id="numItemBuyFields" placeholder="no. of items" min="1">
+ <button id="createItemBuyFields">add</button>
+</item-number>
+           
+<add-subtract-grid>
+<add-subtract-grid-buttons><button id="addBox">+</button>
+<button id="removeBox">-</button></add-subtract-grid-buttons>
+</add-subtract-grid>
+
+    </add-subtract>
+    
+    <filter><input type="text" id="itemFilter" placeholder="Filter items...">
+
+
+
+</filter><auction-items id="auctionItems">
+
+        </auction-items>
+</auction-filter>
+
+
+    <auction-totals>
+    
+<randomisation>
+    <button id="randomizeNames">randomise names</button>
+    
+    <span id="regulation-counter">0</span>
+    
+</randomisation>
+    
+        <regulation-members>
+            <regulation-members>
+                <member-content>
+                    <member-money><name contenteditable="true">andrew</name><span class="money">98</span></member-money>
+                    <member-grid class="item-grid"></member-grid>
+                </member-content>
+                <member-content>
+                    <member-money><name contenteditable="true">eric</name><span class="money">98</span></member-money>
+                    <member-grid class="item-grid"></member-grid>
+                </member-content>
+                <member-content>
+                    <member-money><name contenteditable="true">nick</name><span class="money">98</span></member-money>
+                    <member-grid class="item-grid"></member-grid>
+                </member-content>
+                <member-content>
+                    <member-money><name contenteditable="true">geoff</name><span class="money">98</span></member-money>
+                    <member-grid class="item-grid"></member-grid>
+                </member-content>
+                <member-content>
+                    <member-money><name contenteditable="true">gavin</name><span class="money">98</span></member-money>
+                    <member-grid class="item-grid"></member-grid>
+                </member-content>
+            </regulation-members>
+
+    </auction-totals>
+   
+</div></div>
+
+<regulation-bottom><div class="regulation-credit">
+        <a href="https://www.patreon.com/TheRegulationPod" target="_blank">regulation podcast</a>
+        <div class="regulation-break"> // </div>
+        <a href="https://www.reddit.com/user/seanbear/" target="_blank">seanbear</a>
+        <div class="regulation-break"> // </div>
+<a href="https://regulationdrafts.github.io/drafts" target="_blank">draft generator</a>
+    </div>  </regulation-bottom>
+</body>
+</html>

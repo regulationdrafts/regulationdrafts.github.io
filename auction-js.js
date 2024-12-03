@@ -217,3 +217,59 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeExistingItemBuyFields();
     populateInitialItemSlots();
 });
+
+// Initialize variables
+let counter = 0;
+let repeatCount = 0;
+
+document.getElementById('randomizeNames').addEventListener('click', () => {
+    const memberMoneyElements = document.querySelectorAll('member-money name');
+    const names = Array.from(memberMoneyElements).map(el => el.textContent.trim());
+
+    // Shuffle names
+    for (let i = names.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [names[i], names[j]] = [names[j], names[i]];
+    }
+
+    // Assign shuffled names back to elements
+    memberMoneyElements.forEach((el, index) => {
+        el.textContent = names[index];
+    });
+
+    // Update the counter with easter eggs
+    const clickCounter = document.getElementById('regulation-counter');
+
+    // Parse current counter value or easter egg state
+    let currentCount;
+    if (clickCounter.textContent === "nice") {
+        currentCount = 69;
+    } else if (clickCounter.textContent === "summer of 98") {
+        currentCount = 98;
+    } else if (clickCounter.textContent === "blaze it") {
+        currentCount = 420;
+    } else if (clickCounter.textContent.startsWith("16")) {
+        currentCount = 16;
+    } else {
+        currentCount = parseInt(clickCounter.textContent) || 0;
+    }
+
+    // Easter egg logic
+    if (currentCount === 68) {
+        clickCounter.textContent = "nice";
+    } else if (currentCount === 97) {
+        clickCounter.textContent = "summer of 98";
+    } else if (currentCount === 419) {
+        clickCounter.textContent = "blaze it";
+    } else if (currentCount === 16 && repeatCount < 4) {
+        repeatCount++;
+        clickCounter.innerHTML = `16 <span style="opacity: 0.7; font-size: 16"> (${16 + repeatCount})</span>`;
+    } else {
+        if (currentCount === 16) {
+            repeatCount = 0;
+            clickCounter.textContent = "21";
+        } else {
+            clickCounter.textContent = currentCount + 1;
+        }
+    }
+});

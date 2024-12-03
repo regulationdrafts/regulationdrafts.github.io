@@ -25,6 +25,7 @@ auction-items {
             height: 30px;
             display: inline-flex;
             align-items: center;
+    transition: 0.2s;
         }
         item-buy {
             border-radius: 5px;
@@ -46,6 +47,7 @@ auction-items {
             color: #FFF;
             align-items: center;
             justify-content: center;
+    transition: 0.2s;
         }
         select.buyer-dropdown {
             background-color: #121212;
@@ -57,6 +59,7 @@ auction-items {
             border: 0px;
             -webkit-appearance: menulist-button;
             height: 40px;
+    transition: 0.2s;
         }
         .buyer-dropdown option {
             font: 700 14px Helvetica;
@@ -65,6 +68,10 @@ auction-items {
             display: flex;
             gap: 10px;
         }
+item:hover, select.buyer-dropdown:hover, price:hover {
+    background-color: #222;
+    transition: 0.2s;
+}
 member-money {
     display: flex;
     font: 700 20px Helvetica;

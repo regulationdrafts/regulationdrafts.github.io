@@ -193,14 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const newTotalFields = currentItemBuyFields + numFields;
 
         // Check if adding new fields exceeds the limit
-        if (numFields > 0 && newTotalFields <= 100) {
+        if (numFields > 0 && newTotalFields <= 250) {
             for (let i = 0; i < numFields; i++) {
                 const newItemBuy = createNewItemBuyField();
                 auctionItemsContainer.appendChild(newItemBuy);
                 addItemBuyFieldListeners(newItemBuy);
             }
-        } else if (newTotalFields > 100) {
-            alert('100 items max!');
+        } else if (newTotalFields > 250) {
+            alert('250 items max!');
         }
     });
 

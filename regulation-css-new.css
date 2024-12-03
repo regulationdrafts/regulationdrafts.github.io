@@ -17,7 +17,7 @@ body {
 }
 
 .regulation-header img {
-    height: 40px;
+    height: 25px;
     margin-top: -5px;
     margin-left: 5px;
 }
@@ -40,7 +40,7 @@ regulation-patreon {
 
 home-button {
     margin-left: 50px;
-    font-size: 40px;
+    font-size: 25px;
     transition: 0.3s;
 }
 

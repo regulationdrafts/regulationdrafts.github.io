@@ -1,273 +1,221 @@
-body {
-	background-color: #000;
-	color: #FFF;
-	font-family: Helvetica;
-}
-
-.regulation-auction {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-.auction-points {
-	display: flex;
-	flex-direction: row;
-}
-
+        body { background-color: #000; color: #FFF; font-family: Helvetica; }
+        
+        .regulation-auction {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .auction-points { display: flex; flex-direction: row; }
 auction-items {
-	display: flex;
-	flex-direction: column;
-	font-weight: 700;
-	height: 472px;
-	overflow-y: auto;
-	padding: 0px 10px 0px 0px;
-	width: 400px;
-	margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    height: 377px;
+    overflow-y: auto;
+    padding: 0px 10px 0px 0px;
+    width: 400px;
+    margin-right: 10px;
 }
-
-item {
-	margin: 5px;
-	background-color: #121212;
-	padding: 5px;
-	border-radius: 5px;
-	width: 100%;
-	height: 30px;
-	display: inline-flex;
-	align-items: center;
-	transition: 0.2s;
-}
-
-item-buy {
-	border-radius: 5px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-left: 10px;
-}
-
-buyer-price {
-	display: flex;
-	gap: 5px;
-}
-
-price {
-	display: flex;
-	height: 40px;
-	width: 50px;
-	background-color: #121212;
-	border-radius: 5px;
-	text-align: center;
-	color: #FFF;
-	align-items: center;
-	justify-content: center;
-	transition: 0.2s;
-}
-
-select.buyer-dropdown {
-	background-color: #121212;
-	color: #FFF;
-	border-radius: 5px;
-	padding: 5px;
-	font: 700 14px Helvetica;
-	text-transform: lowercase;
-	border: 0px;
-	-webkit-appearance: menulist-button;
-	height: 40px;
-	transition: 0.2s;
-}
-
-.buyer-dropdown option {
-	font: 700 14px Helvetica;
-}
-
-regulation-members {
-	display: flex;
-	gap: 10px;
-}
-
-item:hover,
-select.buyer-dropdown:hover,
-price:hover {
-	background-color: #222;
-	transition: 0.2s;
-}
-
+        item {
+            margin: 5px;
+            background-color: #121212;
+            padding: 5px;
+            border-radius: 5px;
+            width: 100%;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+        }
+        item-buy {
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        buyer-price {
+            display: flex;
+            gap: 5px;
+        }
+        price {
+            display: flex;
+            height: 40px;
+            width: 50px;
+            background-color: #121212;
+            border-radius: 5px;
+            text-align: center;
+            color: #FFF;
+            align-items: center;
+            justify-content: center;
+        }
+        select.buyer-dropdown {
+            background-color: #121212;
+            color: #FFF;
+            border-radius: 5px;
+            padding: 5px;
+            font: 700 14px Helvetica;
+            text-transform: lowercase;
+            border: 0px;
+            -webkit-appearance: menulist-button;
+            height: 40px;
+        }
+        .buyer-dropdown option {
+            font: 700 14px Helvetica;
+        }
+        regulation-members {
+            display: flex;
+            gap: 10px;
+        }
 member-money {
-	display: flex;
-	font: 700 20px Helvetica;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	flex-direction: column;
-	margin-bottom: 10px;
+    display: flex;
+    font: 700 20px Helvetica;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
-
 span.money {
-	display: flex;
-	background-color: #333333;
-	padding: 5px 0px;
-	border-radius: 5px;
-	width: 100%;
-	height: 25px;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-	font-size: 17px;
-	cursor: default;
+    display: flex;
+    background-color: #333333;
+    padding: 5px 0px;
+    border-radius: 5px;
+    width: 100%;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 17px;
+    cursor: default;
 }
-
 member-grid {
-	display: grid;
-	grid-template-rows: repeat(4, 1fr);
-	gap: 5px;
-	width: 150px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+    width: 150px;
 }
+        member-grid item-slot {
+            background-color: #121212;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            font-family: Helvetica;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            border: solid 1px #636363;
+            height: 100px;
+            justify-content: center;
+            text-align: center;
+            padding: 0px 10px;
+        }
+        ::-webkit-scrollbar{width:4px; height:4px;}
+        ::-webkit-scrollbar-thumb{background:#FFF; border-radius:2px;}
 
-member-grid item-slot {
-	background-color: #121212;
-	color: #FFF;
-	display: flex;
-	align-items: center;
-	font-family: Helvetica;
-	font-weight: bold;
-	font-size: 15px;
-	border-radius: 5px;
-	border: solid 1px #636363;
-	height: 100px;
-	justify-content: center;
-	text-align: center;
-	padding: 0px 10px;
-}
-
-::-webkit-scrollbar {
-	width: 4px;
-	height: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #FFF;
-	border-radius: 2px;
-}
-
-[contentEditable=true]:empty:before {
-	content: attr(placeholder);
-	opacity: 0.4;
-}
-
+        [contentEditable=true]:empty:before {
+            content: attr(placeholder);
+            opacity: 0.4;
+        }
 filter {
-	width: 387px;
-	padding: 10px 10px 5px 10px;
-	display: flex;
-	justify-content: space-between;
+    width: 387px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
-
 input#itemFilter {
-	background-color: #121212;
-	border: solid 1px #636363;
-	border-radius: 5px;
-	font: 700 16px Helvetica;
-	text-transform: lowercase;
-	width: 376px;
-	height: 60px;
-	padding-left: 10px;
-	color: #FFF;
-	margin-left: 10px;
-	transition: 0.3s;
+    background-color: #121212;
+    border: solid 1px #636363;
+    border-radius: 5px;
+    font: 700 16px Helvetica;
+    text-transform: lowercase;
+    width: 376px;
+    height: 45px;
+    padding-left: 10px;
+    color: #FFF;
+    margin-left: 10px;
+    transition: 0.3s;
 }
-
-input#itemFilter:hover,
-input#numItemBuyFields:hover,
-button#addBox:hover,
-button#removeBox:hover,
-button#createItemBuyFields:hover,
-button#randomizeNames:hover {
-	background-color: #222;
-	transition: 0.3s;
+input#itemFilter:hover, input#numItemBuyFields:hover, button#addBox:hover, button#removeBox:hover, button#createItemBuyFields:hover {
+background-color: #222;
+transition: 0.3s;
 }
-
 .regulation-header {
-	display: flex;
-	align-items: center;
-	text-align: center;
-	justify-content: space-between;
-	flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
-
 h1 {
-	line-height: 60px;
-	font-size: 50px;
-	cursor: default;
+    line-height: 60px;
+    font-size: 50px;
+    cursor: default;
+}
+.regulation-header img {
+    height: 25px;
+    margin-top: -5px;
+    margin-left: 5px;
 }
 
-.regulation-header img {
-	height: 25px;
-	margin-top: -5px;
-	margin-left: 5px;
+title-text img {
+    height: 40px !important;
+    width: 40px;
 }
 
 regulation-patreon {
-	margin-right: 50px;
-	transition: 0.3s;
+    margin-right: 50px;
+    transition: 0.3s;
 }
 
 title-text {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 home-button {
-	margin-left: 50px;
-	font-size: 25px;
-	transition: 0.3s;
+    margin-left: 50px;
+    font-size: 25px;
+    transition: 0.3s;
 }
 
 home-button a {
-	color: #FFF;
-	text-decoration: none;
+    color: #FFF;
+    text-decoration: none;
 }
 
-home-button:hover,
-regulation-patreon:hover {
-	opacity: 0.6;
-	transition: 0.3s;
+home-button:hover, regulation-patreon:hover {
+    opacity: 0.6;
+    transition: 0.3s;
 }
 
 add-subtract {
-	display: flex;
-	width: 90%;
-	justify-content: center;
-	margin: auto;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
 }
-
-add-subtract-grid,
-add-subtract-buttons {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
-	margin-left: 10px;
-	flex-direction: column;
-	align-items: center;
-	width: 50%;
+add-subtract-grid, add-subtract-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
 }
-
 add-subtract-grid-header {
-	font: 700 16px Helvetica;
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-	opacity: 0.6;
+    font: 700 16px Helvetica;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0.6;
 }
-
 add-subtract-grid-buttons {
-	display: flex;
-	gap: 10px;
-	width: 100%;
-	justify-content: flex-end;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-end;
 }
-
-button#addBox, 
-button#removeBox {
+button#addBox, button#removeBox {
     border: 0px;
     padding: 5px;
     border-radius: 5px;
@@ -275,188 +223,117 @@ button#removeBox {
     color: #FFF;
     font: 700 23px Helvetica;
     text-transform: lowercase;
-    width: 75px;
+    width: 50px;
     height: 50px;
     cursor: pointer;
     transition: 0.3s;
-    display: flex
-;
+}
+button#removeBox {
+    padding: 10px 12px 13px 10px;
+}
+button.deleteButton {
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent;
+    color: #FFF;
+    font: 700 18px Helvetica;
+    text-transform: lowercase;
+    cursor: pointer;
+    display: flex;
+}
+item-number {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+input#numItemBuyFields {
+    height: 30px;
+    transition: 0.3s;
+}
+button#createItemBuyFields {
+    height: 50px;
+    border: 0px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #121212;
+    font: 700 14px Helvetica;
+    color: #FFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 50px;
+}
+input#numItemBuyFields {
+    height: 30px;
+    background-color: #121212;
+    border: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    font: 700 14px Helvetica;
+    text-transform: lowercase;
+    color: #FFF;
+}
+.butthole {
+width: 20px;
+height: 20px;
+}
+name {
+    width: 130px;
+    height: 25px;
+    background-color: #121212;
+    border-radius: 5px;
+    padding: 20px 10px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 50px;
 }
 
-button#removeBox {
-	padding: 10px 12px 13px 10px;
+.regulation-credit a, .regulation-break {
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+    font-family: Helvetica;
+    font-weight: bold;
+    opacity: 0.5;
+    font-size: 14px;
+    color: #FFF;
+    text-decoration: none;
+    transition: 0.5s;
+    margin-top: 10px;
 }
-
-button.deleteButton {
-	border: 0px;
-	border-radius: 5px;
-	padding: 10px;
-	background-color: transparent;
-	color: #FFF;
-	font: 700 18px Helvetica;
-	text-transform: lowercase;
-	cursor: pointer;
-	display: flex;
-}
-
-item-number {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	width: 100%;
-}
-
-input#numItemBuyFields {
-	height: 30px;
-	transition: 0.3s;
-}
-
-button#randomizeNames {
-	width: 200px;
-	margin-bottom: 10px;
-}
-
-button#createItemBuyFields {
-	height: 50px;
-	border: 0px;
-	padding: 10px;
-	margin-left: 10px;
-	background-color: #121212;
-	font: 700 14px Helvetica;
-	color: #FFF;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: 0.3s;
-	width: 100px;
-}
-
-input#numItemBuyFields {
-	height: 30px;
-	background-color: #121212;
-	border: 0px;
-	padding: 10px;
-	border-radius: 5px;
-	font: 700 14px Helvetica;
-	text-transform: lowercase;
-	color: #FFF;
-	width: 100%;
-}
-
-.butthole {
-	width: 20px;
-	height: 20px;
-}
-
-img.butthole {
-	transition: 0.2s;
-}
-
-img.butthole:hover {
-	opacity: 0.7;
-	transition: 0.2s;
-}
-
-name {
-	width: 130px;
-	height: 25px;
-	background-color: #121212;
-	border-radius: 5px;
-	padding: 20px 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.regulation-credit a,
-.regulation-break {
-	display: flex;
-	justify-content: center;
-	padding: 7px;
-	font-family: Helvetica;
-	font-weight: bold;
-	opacity: 0.5;
-	font-size: 14px;
-	color: #FFF;
-	text-decoration: none;
-	transition: 0.5s;
-	margin-top: 70px;
-}
-
 .regulation-credit {
-	width: 100%;
-	margin: auto;
-	background-color: #000;
-	display: inline-flex;
-	justify-content: center;
-	margin-top: 10px;
+    width: 100%;
+    margin: auto;
+    background-color: #000;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 10px;
 }
-
 .regulation-credit a:hover {
-	opacity: 1;
-	transition: 0.5s;
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .regulation-header img {
-	height: 40px;
-	margin-top: -5px;
-	margin-left: 5px;
+    height: 40px;
+    margin-top: -5px;
+    margin-left: 5px;
 }
-
 .regulation-title textarea {
-	width: 100%;
-	height: 100px;
-	resize: none;
-	padding: 10px;
-	box-sizing: border-box;
-	text-align: center;
-	background-color: #121212;
-	color: #FFF;
-	font-family: Helvetica;
-	font-weight: bold;
-	border-radius: 5px;
-	margin-bottom: 25px;
-	line-height: 80px;
-	border: 0px;
-	font-size: 40px;
-}
-
-randomisation {
-	height: 50px;
-	display: flex;
-	gap: 10px;
-}
-
-#randomizeNames {
-	height: 50px;
-	border: 0px;
-	padding: 10px;
-	background-color: #121212;
-	font: 700 16px Helvetica;
-	color: #FFF;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: 0.3s;
-	width: 50px;
-}
-
-#regulation-counter {
-	margin-bottom: 10px;
-	height: 50px;
-	background-color: #121212;
-	font: 700 16px Helvetica;
-	display: inline-flex;
-	min-width: 200px;
-	justify-content: center;
-	align-items: center;
-	border-radius: 5px;
-	gap: 4px;
-	cursor: default;
-}
-
-random-addminus {
-	display: flex;
-	margin-bottom: 10px;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #121212;
+    color: #FFF;
+    font-family: Helvetica;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    line-height: 80px;
+    border: 0px;
+    font-size: 40px;
 }

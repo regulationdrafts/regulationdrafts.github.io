@@ -1,4 +1,3 @@
-<script>
   const updateNumbering = () => {
     const items = document.querySelectorAll('#target-list li');
     items.forEach((item, index) => {
@@ -85,4 +84,3 @@
       document.getElementById('add-item-button').click();
     }
   });
-</script>

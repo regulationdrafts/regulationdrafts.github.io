@@ -153,29 +153,26 @@ regulation-patreon:hover {
 
 
 ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	border: solid 1px #636363;
-	background: #121212;
-	border-radius: 6px;
-	min-height: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: solid 1px #636363;
+    background: #121212;
+    border-radius: 6px;
+    min-height: 457px;
 }
 
 ul#source-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	border: solid 1px #636363;
-	background: #121212;
-	border-radius: 6px;
-	min-height: 200px;
-	max-height: 400px;
-	/* Adjust this value to control the maximum height */
-	overflow-y: auto;
-	/* Enables vertical scrolling */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: solid 1px #636363;
+    background: #121212;
+    border-radius: 6px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
 }
-
 
 li {
 	padding: 12px;

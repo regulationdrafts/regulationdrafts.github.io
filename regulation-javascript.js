@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentCount = 98;
         } else if (clickCounter.textContent === "blaze it") {
             currentCount = 420;
-        } else if (clickCounter.textContent.startsWith("16")) {
+        } else if (clickCounter.textContent === "16") {
             currentCount = 16;
         } else {
             currentCount = parseInt(clickCounter.textContent);

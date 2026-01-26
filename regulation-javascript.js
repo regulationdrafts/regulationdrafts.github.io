@@ -12,6 +12,48 @@ document.addEventListener('DOMContentLoaded', () => {
     let extraNameBox = null;
     let repeatCount = 0;
 
+/******** nicknames ********/
+
+    const nicknameMap = {
+        "andrew": "dilly pop",
+        "eric": "lil' sketti",
+        "gavin": "triggerman",
+        "geoff": "the candy man",
+        "nick": "babyface"
+    };
+
+    const reverseNicknameMap = Object.fromEntries(
+        Object.entries(nicknameMap).map(([k, v]) => [v, k])
+    );
+
+/******** nickname hover ********/
+
+    document.addEventListener('mouseover', e => {
+        const t = e.target;
+        if (!t.matches('.regulation-name-box textarea')) return;
+
+        const value = t.value.trim().toLowerCase();
+
+        if (nicknameMap[value]) {
+            t.dataset.originalValue = value;
+            t.value = nicknameMap[value];
+        }
+    });
+
+    document.addEventListener('mouseout', e => {
+        const t = e.target;
+        if (!t.matches('.regulation-name-box textarea')) return;
+
+        const value = t.value.trim().toLowerCase();
+
+        if (reverseNicknameMap[value]) {
+            t.value = reverseNicknameMap[value];
+            delete t.dataset.originalValue;
+        }
+    });
+
+/******** box images ********/
+
     function handlePaste(event) {
         event.preventDefault();
         const pastedData = (event.clipboardData || window.clipboardData).getData('text');
@@ -28,20 +70,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function applyPasteListener() {
         document.querySelectorAll('.regulation-item').forEach(item => {
-            item.removeEventListener('paste', handlePaste); // Remove existing listener
-            item.addEventListener('paste', handlePaste); // Add new listener
+            item.removeEventListener('paste', handlePaste);
+            item.addEventListener('paste', handlePaste);
         });
     }
 
-    applyPasteListener(); // Initial application for existing items
+    applyPasteListener();
+
+/******** randomiser ********/
 
     function randomizeNames() {
+
+        document.querySelectorAll('.regulation-name-box textarea').forEach(t => {
+            const val = t.value.trim().toLowerCase();
+            if (reverseNicknameMap[val]) {
+                t.value = reverseNicknameMap[val];
+            }
+            delete t.dataset.originalValue;
+        });
+
         const nameBoxes = Array.from(nameContainer.querySelectorAll('.regulation-name-box'));
         const names = nameBoxes.map(box => box.querySelector('textarea').value.trim());
+
         for (let i = names.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [names[i], names[j]] = [names[j], names[i]];
         }
+
         nameBoxes.forEach((box, index) => {
             box.querySelector('textarea').value = names[index];
         });
@@ -78,14 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+/******** graysie toggle ********/
+
     function toggleGrid() {
         if (isSixByFour) {
             container.classList.remove('grid-6x4');
-            container.classList.add('grid-5x4');
             nameContainer.classList.remove('grid-6x1');
-            nameContainer.classList.add('grid-5x1');
 
-            // Remove extra items if the grid is reduced
             if (extraItems.length > 0) {
                 extraItems.forEach(item => item.remove());
                 extraItems = [];
@@ -95,12 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 extraNameBox = null;
             }
         } else {
-            container.classList.remove('grid-5x4');
             container.classList.add('grid-6x4');
-            nameContainer.classList.remove('grid-5x1');
             nameContainer.classList.add('grid-6x1');
 
-            // Add new grid items
             if (container.children.length < 24) {
                 for (let i = 0; i < 4; i++) {
                     const newItem = document.createElement('div');
@@ -109,11 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     container.appendChild(newItem);
                     extraItems.push(newItem);
                 }
-                // Call applyPasteListener after adding new items
-                applyPasteListener(); // Ensure the new items can also paste images
+                applyPasteListener();
             }
 
-            // Add extra name box
             if (!extraNameBox) {
                 extraNameBox = document.createElement('div');
                 extraNameBox.className = 'regulation-name-box';
@@ -121,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 nameContainer.appendChild(extraNameBox);
             }
         }
+
         isSixByFour = !isSixByFour;
 
         const maxWidth = isSixByFour ? '125px' : '150px';
@@ -129,34 +179,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+/******** add subtract rows ********/
+
     function addRow() {
-        const gridContainer = document.querySelector('.regulation-container');
         const itemsToAdd = isSixByFour ? 6 : 5;
         for (let i = 0; i < itemsToAdd; i++) {
             const newItem = document.createElement('div');
             newItem.className = 'regulation-item';
             newItem.contentEditable = 'true';
-            gridContainer.appendChild(newItem);
+            container.appendChild(newItem);
         }
-
-        const currentRows = getComputedStyle(gridContainer).gridTemplateRows.split(' ').length;
-        gridContainer.style.gridTemplateRows = `repeat(${currentRows + 1}, auto)`;
-        applyPasteListener(); // Ensure new rows can also paste images
+        applyPasteListener();
     }
 
     function subtractRow() {
-        const gridContainer = document.querySelector('.regulation-container');
         const itemsToRemove = isSixByFour ? 6 : 5;
-        const currentItems = gridContainer.querySelectorAll('.regulation-item');
-        
+        const currentItems = container.querySelectorAll('.regulation-item');
+
         if (currentItems.length >= itemsToRemove) {
             for (let i = 0; i < itemsToRemove; i++) {
                 currentItems[currentItems.length - 1 - i].remove();
-            }
-
-            const currentRows = getComputedStyle(gridContainer).gridTemplateRows.split(' ').length;
-            if (currentRows > 1) {
-                gridContainer.style.gridTemplateRows = `repeat(${currentRows - 1}, auto)`;
             }
         }
     }

@@ -208,3 +208,12 @@ document.addEventListener('DOMContentLoaded', () => {
     addButton.addEventListener('click', addRow);
     subtractButton.addEventListener('click', subtractRow);
 });
+
+function myFunction() {
+  var x = document.getElementById("regulation-waiting");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}

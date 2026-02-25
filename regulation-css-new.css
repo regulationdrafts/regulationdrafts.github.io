@@ -276,3 +276,64 @@ button#addButton, button#subtractButton {
     opacity: 1;
     transition: 0.5s;
 }
+
+/******** draft starting soon ********/
+
+#regulation-waiting {
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#regulation-waiting img {
+    width: 100px;
+    height: 100px;
+	animation: spin 2s infinite;
+	display: inline-block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+
+  /* 360 - 20 = 340deg → 94.44% of animation */
+  94.44% {
+    transform: rotate(340deg);
+    animation-timing-function: cubic-bezier(.4, 0, .7, 1); /* slowdown curve */
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.waiting-button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #121212;
+    border: 0px;
+    color: #FFF;
+    font-family: Helvetica;
+    width: 20%;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

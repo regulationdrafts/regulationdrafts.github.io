@@ -110,6 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
             currentCount = 420;
         } else if (clickCounter.textContent === "16") {
             currentCount = 16;
+        } else if (clickCounter.textContent === "baker's regulation") {
+            currentCount = 6;
         } else {
             currentCount = parseInt(clickCounter.textContent);
         }
@@ -118,6 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
             clickCounter.textContent = "nice";
         } else if (currentCount === 97) {
             clickCounter.textContent = "summer of 98";
+        } else if (currentCount === 5) {
+            clickCounter.textContent = "baker's regulation";
         } else if (currentCount === 419) {
             clickCounter.textContent = "blaze it";
         } else if (currentCount === 16 && repeatCount < 4) {
